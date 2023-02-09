@@ -1,0 +1,38 @@
+set title ""
+set xl "ramp up rate [ppm]" 
+set yl "uniformity [ppm]" textcolor rgb "red"
+set y2l "cost [a.u.]*1.e3" textcolor rgb "blue"
+set ytics textcolor rgb "red"
+set y2tics textcolor rgb "blue"
+set yl offset -1.8,0
+set y2l offset 1.8,0
+set autoscale
+set ytics nomirror
+set title font "Arial,20"
+set xl font "Arial,20"
+set yl font "Arial,20"
+set y2l font "Arial,20"
+set title offset 0,0
+set xtics font "Arial,18"
+set ytics font "Arial,18"
+set y2tics font "Arial,18"
+set key font "Arial,18"
+set border lw 2
+set key outside top center
+set grid x
+set grid y
+set autoscale
+set yr[0:0.1]
+p "RampUpRateDetermination.dat" u 1:2 axis x1y1 title "azimuthally averaged uniformity [ppm]" w lp lw 2 lc rgb "red" pt 7
+rep "RampUpRateDetermination.dat" u 1:($3*1.e-3) axis x1y2 title "cost [a.u]*1.e3" w lp lw 2 lc rgb "blue" pt 2
+
+set term pngcairo
+set output "scan_BufferRate.png"
+rep
+
+
+
+
+
+
+

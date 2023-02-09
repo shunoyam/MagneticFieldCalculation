@@ -1,0 +1,33 @@
+#set title "SVD of uniform By by Br-type shim coil"
+#set xl "coil number"
+#set yl "current magnitude [a.u]"
+set multiplot layout 3,2
+set yl offset -1.8,0
+set autoscale
+set title font "Arial,10"
+set xl font "Arial,10"
+set yl font "Arial,10"
+set title offset 0,0
+set xtics font "Arial,10"
+set ytics font "Arial,10"
+set key font "Arial,10"
+set border lw 1
+#set size ratio 1
+set key top center outside
+set yr[-1:1]
+p "0.dat" title "mode 0" w lp  lw 1 pt 7 lc rgb "blue"
+p "1.dat" title "mode 1" w lp  lw 1 pt 7 lc rgb "blue"
+p "2.dat" title "mode 2" w lp  lw 1 pt 7 lc rgb "blue"
+p "3.dat" title "mode 3" w lp  lw 1 pt 7 lc rgb "blue"
+p "4.dat" title "mode 4" w lp  lw 1 pt 7 lc rgb "blue"
+p "5.dat" title "mode 5" w lp  lw 1 pt 7 lc rgb "blue"
+set term png
+set output ".png"
+rep
+
+
+
+
+
+
+

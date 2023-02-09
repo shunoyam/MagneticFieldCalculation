@@ -1,0 +1,25 @@
+set title ""
+set xl "{/Symbol q}"
+set yl "B_{r} [T]*10^{3}"
+set yl offset -1.8,0
+set autoscale
+set title font "Arial,20"
+set xl font "Arial,20"
+set yl font "Arial,20"
+set title offset 0,0
+set xtics font "Arial,15"
+set ytics font "Arial,15"
+set key font "Arial,15"
+set border lw 2
+set xr[-3.14:3.14]
+p "cut.dat" u 1:($2*1.e3)  title "" w l lw 2 lc rgb "web-blue"
+set term pngcairo
+set output ".png"
+rep
+
+
+
+
+
+
+

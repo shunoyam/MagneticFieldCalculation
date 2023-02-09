@@ -1,0 +1,27 @@
+set title ""
+set xl "{/Symbol w}"
+set yl "RF power output"
+set yl offset -1.8,0
+set autoscale
+set title font "Arial,20"
+set xl font "Arial,30"
+set yl font "Arial,30"
+set title offset 0,0
+set notics
+set key font "Arial,30"
+set border lw 2
+set key bottom right
+set yr[-1.3:0]
+p "test.dat" u 1:(-$2) title "ch1" w l lw 2 lc rgb "web-blue"
+rep "test.dat" u 1:(-$3) title "ch2" w l lw 2 lc rgb "red"
+rep "test.dat" u 1:(-$4) title "ch1+crosstalk" w l lw 2 lc rgb "blue"
+set term pngcairo
+set output ".png"
+rep
+
+
+
+
+
+
+

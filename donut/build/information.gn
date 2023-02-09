@@ -1,0 +1,30 @@
+set title ""
+set xl "mode number"
+set yl "singular value [T/A]"
+set yl offset 0,0
+set autoscale
+set title font "Arial,20"
+set xl font "Arial,20"
+set yl font "Arial,20"
+set title offset 0,0
+set xtics font "Arial,15"
+set ytics font "Arial,15"
+set key font "Arial,15"
+set border lw 2
+#set size ratio 1
+set key top right
+set logscale y
+#set yr[1.e-3:1e3]
+set xr[70:90]
+set format y "10^{%L}"
+p "information_0731.dat" u 1:3 title "" w lp pt 7 ps .1 lw 2 lc rgb "black"
+set term pdf
+set output "SingularValueTransition.pdf"
+rep
+
+
+
+
+
+
+

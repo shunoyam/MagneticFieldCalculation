@@ -1,0 +1,19 @@
+set autoscale
+set key font "Arial,15"
+set border lw 2
+set notics
+set noborder
+#set size ratio 1
+sp "storage.dat" title "" w p pt 7 ps .4 lc rgb "cyan"
+rep "pocket.dat" title "" w p pt 7 ps .1 lc rgb "black"
+#3colors   "#FF4B00"   "#005AF"  "#03AF7A"
+set term png
+set output ".png"
+rep
+
+
+
+
+
+
+

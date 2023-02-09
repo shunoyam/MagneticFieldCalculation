@@ -1,0 +1,40 @@
+
+set title ""
+#set xl "x [m]"
+#set yl "y [m]"
+#set zl "z [m]"
+#set xl offset 1,0
+#set yl offset -1.8,0
+#set zl offset -1,0
+set noborder
+set nozeroaxis
+set autoscale
+set notics
+#set title font "Arial,20"
+#set xl font "Arial,20"
+#set yl font "Arial,20"
+#set zl font "Arial,20"
+#set title offset 0,0
+#set xtics font "Arial,15"
+#set ytics font "Arial,15"
+#set ztics font "Arial,15"
+set key font "Arial,15"
+set view 60,20
+set border lw 2
+#set size ratio 1
+set key right top
+#set ticslevel 0
+#set logscale y
+#set format y "10^{%L}"
+sp "shim.dat" title "" pt 5 lc rgb "web-green" ps .6
+rep "storage.dat" title "" w l lw 4 lc rgb "web-blue"
+set term pngcairo
+set output ".png"
+rep
+
+
+
+
+
+
+

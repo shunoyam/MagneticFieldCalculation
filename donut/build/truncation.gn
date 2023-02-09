@@ -1,0 +1,33 @@
+set title ""
+set xl "Number of iteration [a.u.]"
+set yl "Local uniformity [ppm]"
+set xl offset 0,.6
+set yl offset .5,0
+set autoscale
+set title font "Arial,20"
+set xl font "Arial,15"
+set yl font "Arial,15"
+set title offset 0,0
+set xtics font "Arial,15"
+set ytics font "Arial,15"
+set key font "Arial,15"
+set border lw 2
+set size ratio .7
+set yr [1.e-2:50]
+set key top right
+set logscale y
+set format y "10^{%L}"
+set grid y lw 2 
+p "75truncation.dat" title "n_{tr}=75" w l lw 2 lc rgb "dark-red"
+rep "98truncation.dat" title "n_{tr}=98" w l lw 2 lc rgb "dark-violet"
+rep "120truncation.dat" title "n_{tr}=120" w l lw 2 lc rgb "sea-green"
+set term pdf
+set output "truncation.pdf"
+rep
+
+
+
+
+
+
+

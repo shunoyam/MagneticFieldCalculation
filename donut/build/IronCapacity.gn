@@ -1,0 +1,41 @@
+set term pdf
+set output "IronCapacity_20220815.pdf"
+set multiplot layout 2,2
+set yl offset 0,0
+set autoscale
+s=4
+set title font "Arial,s"
+set yl font "Arial,s"
+set title offset 0,0
+set xtics font "Arial,s"
+set xtics offset 0,.5
+set ytics font "Arial,s"
+set key font "Arial,8"
+set border lw 1
+#set size ratio 1
+set key top left
+
+set yl "Use rate [a.u.]"
+unset xl
+p "IronCapacity_20220815.dat" u ($1*1.e3):2 title "" w lp  lw 1 pt 7 ps .3  lc rgb "black"
+set yl "(B_{z}^{tg} [T]-3)*10^{3}"
+p "IronCapacity_20220815.dat" u ($1*1.e3):(3.e3 *(1-$3)) title "" w lp  lw 1 pt 7 ps .3  lc rgb "black"
+set yl ("Uniformity after shimming [ppm]")
+set xl "Max tolerance [mm]"
+set xl font "Arial,s"
+set xl offset 0,1
+p "IronCapacity_20220815.dat" u ($1*1.e3):($4*1.e6) title "Local" w lp  lw 1 pt 7 ps .3  lc rgb "red"
+rep "IronCapacity_20220815.dat" u ($1*1.e3):($5*1.e6) title "Azimuthal average" w lp  lw 1 pt 7 ps .3  lc rgb "orange"
+
+p "IronCapacity_20220815.dat" u ($1*1.e3):6 title "Upper limit" w lp lw 1 pt 7 ps .3 lc rgb "blue"
+rep "IronCapacity_20220815.dat" u ($1*1.e3):7 title "Within limit" w lp lw 1 pt 7 ps .3 lc rgb "blue"
+rep "IronCapacity_20220815.dat" u ($1*1.e3):8 title "Lower limit" w lp lw 1 pt 7 ps .3 lc rgb "blue"
+
+
+
+
+
+
+
+
+

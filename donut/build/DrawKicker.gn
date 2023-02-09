@@ -1,0 +1,28 @@
+set title ""
+set xl ""
+set yl ""
+set yl offset -1.8,0
+set autoscale
+set title font "Arial,20"
+set xl font "Arial,20"
+set yl font "Arial,20"
+set title offset 0,0
+set xtics font "Arial,15"
+set ytics font "Arial,15"
+set key font "Arial,15"
+set border lw 2
+#set size ratio 1
+set key top right
+#set logscale y
+p "DrawKicker.dat" u 2:3 title "" w p pt 7 rgb "web-blue"
+#3colors   "#FF4B00"   "#005AF"  "#03AF7A"
+set term png
+set output ".png"
+rep
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+set title ""
+set xl "x [cm]"
+set yl "dB_{z}/dx [T/m]"
+set autoscale
+set title font "Arial,20"
+set xl font "Arial,20"
+set yl font "Arial,20"
+set title offset 0,0
+set xtics font "Arial,15"
+set ytics font "Arial,15"
+set key font "Arial,15"
+set border lw 2
+#set size ratio 1
+set key right outside
+p "HorizontalGradient.dat" u 1:2 title "iron yoke" w l lw 2 lc rgb "web-blue"
+rep "HorizontalGradient.dat" u 1:3 title "MC10" w l lw 2 lc rgb "red"
+rep "HorizontalGradient.dat" u 1:4 title "MC11" w l lw 2 lc rgb "web-green"
+rep "HorizontalGradient.dat" u 1:5 title "MC20" w l lw 2 lc rgb "orange"
+rep "HorizontalGradient.dat" u 1:6 title "MC21" w l lw 2 lc rgb "gray"
+rep "HorizontalGradient.dat" u 1:7 title "MC30" w l lw 2 lc rgb "violet"
+set term pdfcairo
+set output "HorizontalGradient.pdf"
+rep
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+set title ""
+set xl "x or y [m]"
+set yl "magnetic field[T]"
+set yl offset -1.8,0
+set autoscale
+set title font "Arial,20"
+set xl font "Arial,20"
+set yl font "Arial,20"
+set title offset 0,0
+set xtics font "Arial,15"
+set ytics font "Arial,15"
+set key font "Arial,15"
+set border lw 2
+set key left top
+set logscale y
+set format y "10^{%L}"
+p "DiagonalCut.dat" u 1:2  title "Bx" w l lw 2 lc rgb "web-blue"
+rep "DiagonalCut.dat" u 1:3  title "By" w l lw 2 lc rgb "red"
+rep "DiagonalCut.dat" u 1:4  title "Bz" w l lw 2 lc rgb "web-green"
+rep "DiagonalCut.dat" u 1:5  title "|B|" w l lw 2 lc rgb "black"
+set term pngcairo
+set output ".png"
+rep
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+set title ""
+set xl "mode number"
+set yl "singular value [T/A]"
+set yl offset -1.8,0
+set autoscale
+set title font "Arial,20"
+set xl font "Arial,20"
+set yl font "Arial,20"
+set title offset 0,0
+set xtics font "Arial,15"
+set ytics font "Arial,15"
+set key font "Arial,15"
+set border lw 2
+set size ratio .6
+set key top right
+set logscale y
+set format y "10^{%L}"
+p "information.dat" u 0:1 title "" w lp pt 7 ps .5 lw 2 lc rgb "black"
+set term png
+set output ".png"
+rep
+
+
+
+
+
+
+

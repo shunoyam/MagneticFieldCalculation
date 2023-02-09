@@ -1,0 +1,3 @@
+/home/shun/workspace/simulation/2023/donut/build/CMakeFiles/it.dir
+/home/shun/workspace/simulation/2023/donut/build/CMakeFiles/edit_cache.dir
+/home/shun/workspace/simulation/2023/donut/build/CMakeFiles/rebuild_cache.dir

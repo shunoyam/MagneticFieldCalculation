@@ -1,0 +1,29 @@
+set title ""
+set xl "height [m]"
+set yl "By[T]"
+set yl offset -1.8,0
+set autoscale
+set title font "Arial,20"
+set xl font "Arial,20"
+set yl font "Arial,20"
+set title offset 0,0
+set xtics font "Arial,15"
+set ytics font "Arial,15"
+set key font "Arial,15"
+set border lw 2
+#set size ratio 1
+set key center
+set logscale x
+set format x "10^{%L}"
+#set format y "10^{%L}"
+p "stretch.dat" u 1:(-$2) title "" w l lw 2 lc rgb "black"
+set term pngcairo
+set output ".png"
+rep
+
+
+
+
+
+
+

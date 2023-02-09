@@ -1,0 +1,28 @@
+set title "difference"
+set xl "{/Symbol q} [rad]"
+set yl "B_{y}^{svd} - B_{y}^{simple} [T]"
+set yl offset -1.8,0
+set autoscale
+set title font "Arial,20"
+set xl font "Arial,20"
+set yl font "Arial,20"
+set title offset 0,0
+set xtics font "Arial,15"
+set ytics font "Arial,15"
+set key font "Arial,15"
+set border lw 2
+set size ratio .5
+set key top right
+#set logscale y
+#set format y "10^{%L}"
+p "svd.dat" u 1:($2-$3) title ""  w p pt 7 lc rgb "black"
+set term png
+set output ".png"
+rep
+
+
+
+
+
+
+

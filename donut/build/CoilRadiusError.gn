@@ -1,0 +1,33 @@
+set title ""
+set xl "coil radius error [mm]"
+set yl "U_{lc} [ppm]"
+set xl offset 0,1
+set yl offset 1.,0
+set autoscale
+set title font "Arial,20"
+set xl font "Arial,15"
+set yl font "Arial,15"
+set title offset 0,0
+set xtics font "Arial,15"
+set ytics font "Arial,15"
+set key font "Arial,15"
+set border lw 2
+set xtics offset 0,.2
+#set size ratio 1
+set key top center
+#set format y "10^{%L}"
+p "CoilRadiusError.dat" u 1:2 title "MC10" w lp pt 7   ps .4 lw 2 lc rgb "red"
+rep "CoilRadiusError.dat" u 1:3 title "MC11" w lp pt 7 ps .4 lw 2 lc rgb "web-green"
+rep "CoilRadiusError.dat" u 1:4 title "MC20" w lp pt 7 ps .4 lw 2 lc rgb "orange"
+rep "CoilRadiusError.dat" u 1:5 title "MC21" w lp pt 7 ps .4 lw 2 lc rgb "gray"
+rep "CoilRadiusError.dat" u 1:6 title "MC30" w lp pt 7 ps .4 lw 2 lc rgb "violet"
+set term pdf
+set output "CoilRadiusError.pdf"
+rep
+
+
+
+
+
+
+

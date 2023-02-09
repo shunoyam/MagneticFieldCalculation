@@ -1,0 +1,32 @@
+set title ""
+set xl "serial number of magnetic evaluation point"
+set yl "B_{z} [T]"
+set yl offset -1.8,0
+set autoscale
+set title font "Arial,20"
+set xl font "Arial,20"
+set yl font "Arial,20"
+set title offset 0,0
+set xtics font "Arial,15"
+set ytics font "Arial,15"
+set key font "Arial,15"
+set border lw 2
+set size ratio .6
+set key top right outside
+set xr[0:2680]
+set yr[2.999:3.003]
+#set format y "10^{%L}"
+f(x)=3
+p "before.dat" u 0:6 title "before" w l dt (10,5) lw 1 lc rgb "blue"
+rep "after.dat" u 0:6 title "after" w l lw 1 lc rgb "blue"
+rep f(x) title "3 T" w l lw 1 lc rgb "gray"
+set term png
+set output ".png"
+rep
+
+
+
+
+
+
+

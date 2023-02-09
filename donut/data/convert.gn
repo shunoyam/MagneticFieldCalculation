@@ -1,0 +1,29 @@
+set title ""
+
+set xlabel "height [m]"
+set ylabel "By [T]+const"
+set yl offset -1.8,0
+set autoscale
+set title font "Arial,20"
+set xl font "Arial,20"
+set xtics offset 0.,-.5
+set yl font "Arial,20"
+set title offset 0,0
+set xtics font "Arial,15"
+set ytics font "Arial,15"
+set key font "Arial,15"
+set border lw 2
+set key top right
+set logscale xy
+set format xy "10^{%L}"
+p "assymptic.dat" title "" w lp lw 2 lc rgb "web-blue"
+set term pngcairo
+set output ".png"
+rep
+
+
+
+
+
+
+

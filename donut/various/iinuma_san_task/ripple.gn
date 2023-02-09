@@ -1,0 +1,27 @@
+set title "Bz ripple over rotational direction (w/ 4 holes)"
+set xl "{/Symbol q} [rad]"
+set yl "Bz at r=10cm z=34cm[Gauss]"
+set yl offset -1.8,0
+set autoscale
+set title font "Arial,20"
+set xl font "Arial,20"
+set yl font "Arial,20"
+set title offset 0,0
+set xtics font "Arial,15"
+set ytics font "Arial,15"
+set key font "Arial,15"
+set border lw 2
+set key bottom left
+p "ripple_r10z34_type1.dat" title "type 1" w lp lw 2 lc rgb "web-blue"
+rep "ripple_r10z34_type2.dat" title "type 2" w lp lw 2 lc rgb "red"
+rep "ripple_r10z34_type3.dat" title "type 3" w lp lw 2 lc rgb "black"
+set terminal pngcairo
+set output "ripple.png"
+replot
+
+
+
+
+
+
+

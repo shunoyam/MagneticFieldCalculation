@@ -1,0 +1,40 @@
+set title ""
+set xl "truncation eigenmode [a.u.]"
+set yl "local uniformity [ppm]" textcolor rgb "red"
+set y2l "mode strength [T]" textcolor rgb "blue"
+set ytics textcolor rgb "red"
+set y2tics textcolor rgb "blue"
+set yl offset -1.8,0
+set y2l offset 1.8,0
+set autoscale
+set ytics nomirror
+set title font "Arial,20"
+set xl font "Arial,20"
+set yl font "Arial,20"
+set y2l font "Arial,20"
+set title offset 0,0
+set xtics font "Arial,15"
+set ytics font "Arial,13"
+set y2tics font "Arial,15"
+set key font "Arial,15"
+set border lw 2
+set key center top outside
+set logscale y
+set format y "10^{%L}"
+set logscale y2
+set format y2 "10^{%L}"
+set yr[1.e-4:1.e1]
+set y2r[1.e-12:1.e-5]
+p "TruncationModeDetermination_tilt.dat" u 1:2 axis x1y1 title "local uniformity" w lp pt 7 lw 2 lc rgb "red"
+rep "TruncationModeDetermination_tilt.dat" u 1:3 axis x1y1 w l 
+rep "TruncationModeDetermination_tilt.dat" u 1:((abs($4))) axis x1y2 title "mode strength [T]" w l lw 2 lc rgb "blue"
+set term pngcairo
+set output ".png"
+rep
+
+
+
+
+
+
+

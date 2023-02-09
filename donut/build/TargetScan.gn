@@ -1,0 +1,36 @@
+set title "Max tolerance = 0.1 mm, Truncated number = 65"
+set xl "(Target field [T]-3)*1.e6"
+set yl "Reaching local uniformity(p-p) [ppm]"
+set yl offset .5,0
+set ytics offset .5,0
+set autoscale
+set title font "Arial,10"
+set xl font "Arial,10"
+set yl font "Arial,10"
+set title offset 0,0
+set xtics font "Arial,10"
+set ytics font "Arial,10"
+set key font "Arial,10"
+set border lw 2
+set size ratio .4
+set key top right
+set logscale y
+set format y "10^{%L}"
+set multiplot layout 2,1
+p "TargetScan100um.dat" u (($1-3)*1.e6):2 title "" w lp pt 7 ps .7 lw 2 lc rgb "blue"
+set yl "Use rate [/1]"
+unset logscale y
+set format y "%g"
+p "TargetScan100um.dat" u (($1-3)*1.e6):3 title "" w lp pt 7 ps .7 lw 2 lc rgb "black"
+
+#3colors   "#FF4B00"   "#005AF"  "#03AF7A"
+set term png
+set output "TargetScan.png"
+rep
+
+
+
+
+
+
+
